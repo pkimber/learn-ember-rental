@@ -20,6 +20,7 @@ Router.map(function() {
       path: ':contact_id'
     });
   });
+  this.route('ticket');
 });
 
 export default Router;
