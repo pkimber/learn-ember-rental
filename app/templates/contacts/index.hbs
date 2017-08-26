@@ -1,11 +1,11 @@
 <h1>Contacts list</h1>
 
-<p>
+<button class="ui button">
   {{link-to "New Contact" "contacts.new" }}
-</p>
+</button>
 
 {{#if model.length}}
-  <table>
+  <table class="ui celled striped table">
     <thead>
       <tr>
         <th>

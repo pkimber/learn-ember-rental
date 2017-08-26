@@ -1,17 +1,17 @@
-<form {{action "save" on="submit"}}>
-  <div>
+<form {{action "save" on="submit"}} class="ui form">
+  <div class="field">
     <label>
       Company name
       {{input type="text" value=model.companyName}}
     </label>
   </div>
-  <div>
+  <div class="field">
     <label>
       Postcode
       {{input type="text" value=model.postcode}}
     </label>
   </div>
   <div>
-    <input type="submit" value="Save">
+    <input class="ui button" type="submit" value="Save">
   </div>
 </form>
