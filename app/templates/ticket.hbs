@@ -1,1 +1,38 @@
-{{outlet}}
+<h1>Ticket list</h1>
+
+{{#if model.length}}
+  <table class="ui celled striped table">
+    <thead>
+      <tr>
+        <th>
+          Number
+        </th>
+        <th>
+          Title
+        </th>
+        <th>
+          User
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |ticket|}}
+        <tr>
+          <td>
+            {{ticket.id}}
+          </td>
+          <td>
+            {{ticket.title}}
+          </td>
+          <td>
+            {{ticket.username}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Tickets found
+  </p>
+{{/if}}
