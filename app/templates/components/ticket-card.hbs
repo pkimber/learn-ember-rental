@@ -3,7 +3,8 @@
     {{ticket.contact.fullName}}
   </div>
   <div class="meta">
-    {{ticket.priority}}
+    {{ticket.priority.name}}
+    {{ticket.priority.id}}
   </div>
   <div class="description">
     {{ticket.title}}
@@ -11,7 +12,7 @@
 </div>
 <div class="extra content">
   <div class="ui three buttons">
-    <div class="ui basic blue button">High</div>
+    <div {{action "setHighPriority"}} class="ui basic blue button">High</div>
     <div class="ui basic green button">Medium</div>
     <div class="ui basic olive button">Low</div>
   </div>
