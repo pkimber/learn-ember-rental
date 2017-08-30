@@ -1,6 +1,25 @@
-<h1>Ticket list</h1>
-
 {{#if model.length}}
+  <div class="ui cards">
+    {{#each model as |ticket|}}
+      <div class="card">
+        <div class="content">
+          <div class="header">
+            {{ticket.contact.fullName}}
+          </div>
+          <div class="description">
+            {{ticket.title}}
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="ui three buttons">
+            <div class="ui basic blue button">High</div>
+            <div class="ui basic green button">Medium</div>
+            <div class="ui basic olive button">Low</div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
   <table class="ui celled striped table">
     <thead>
       <tr>
