@@ -1,16 +1,22 @@
-<div class="container">
+<div class="ui container">
   <div class="menu">
     {{#link-to 'index'}}
-      <h1>
-        <em>SuperRentals</em>
+      <h1 class="ui header">
+        KB Software Ltd
       </h1>
     {{/link-to}}
-    <div class="links">
-      {{#link-to 'about'}}
-        About
+    <div class="ui tabular menu">
+      {{#link-to 'contacts' class='item'}}
+        Client
       {{/link-to}}
-      {{#link-to 'contact'}}
-        Contact
+      {{#link-to 'ticket' class='item'}}
+        Ticket
+      {{/link-to}}
+      {{#link-to 'about' class='item'}}
+        About Us
+      {{/link-to}}
+      {{#link-to 'contact' class='item'}}
+        Contact Us
       {{/link-to}}
     </div>
   </div>

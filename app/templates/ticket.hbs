@@ -1,0 +1,48 @@
+{{#if model.length}}
+  <br>
+  <div class="ui cards">
+    {{#each model as |ticket|}}
+      {{ticket-card class="card" ticket=ticket}}
+    {{/each}}
+  </div>
+  <table class="ui celled striped table">
+    <thead>
+      <tr>
+        <th>
+          Number
+        </th>
+        <th>
+          Priority
+        </th>
+        <th>
+          Title
+        </th>
+        <th>
+          User
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |ticket|}}
+        <tr>
+          <td>
+            {{ticket.id}}
+          </td>
+          <td>
+            {{ticket.priority}}
+          </td>
+          <td>
+            {{ticket.title}}
+          </td>
+          <td>
+            {{ticket.username}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Tickets found
+  </p>
+{{/if}}

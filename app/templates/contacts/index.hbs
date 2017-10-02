@@ -1,0 +1,54 @@
+<h1>Contacts list</h1>
+
+<button class="ui button">
+  {{link-to "New Contact" "contacts.new" }}
+</button>
+
+{{#if model.length}}
+  <table class="ui celled striped table">
+    <thead>
+      <tr>
+        <th>
+          Company Name
+        </th>
+        <th>
+          User Name
+        </th>
+        <th>
+          Postcode
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |contact|}}
+        <tr>
+          <td>
+            {{contact.companyName}}
+          </td>
+          <td>
+            {{contact.userName}}
+          </td>
+          <td>
+            {{contact.postcode}}
+          </td>
+          <td>
+            {{link-to "Edit" "contacts.edit" contact}}
+          </td>
+          <td>
+            {{link-to "Show" "contacts.show" contact}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" contact}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Contacts found
+  </p>
+{{/if}}

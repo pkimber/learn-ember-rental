@@ -1,0 +1,17 @@
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  actions: {
+    remove: function(model) {
+      if(confirm('Are you sure?')) {
+        model.destroyRecord();
+      }
+    }
+  },
+  model: function() {
+    // return this.store.findAll('contact');
+    return this.store.query('contact', {
+        page: 2
+    })
+  }
+});
