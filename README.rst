@@ -10,6 +10,13 @@ To workaround this issue::
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+Branches
+========
+
+  kbsoftware_couk   1721-learn-ember
+  contact           1721-learn-ember
+  crm               1721-learn-ember
+
 Prerequisites
 =============
 
